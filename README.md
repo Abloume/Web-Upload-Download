@@ -12,9 +12,9 @@ HTML5中提供的文件API在前端中有着丰富的应用，上传、下载、
 
 # 1. FileList对象和File对象
 
-　　HTML5中的 `input[type="file"]` 标签有个 multiple 属性，允许用户选择多个文件，FileList对象则就是表示用户选择的文件列表。这个列表中的每一个文件，就是一个file对象。 
+　　HTML5中的 `input[type="file"]` 标签有个 multiple 属性，允许用户选择多个文件，FileList对象则就是表示用户选择的文件列表。这个列表中的每一个文件，就是一个file对象。 曾几何时，当我们需要实现一个多文件双传功能，必须一次指定多个 `<input type="file" />`，如果要上传10个文件就必须指定10行，因为在HTML4里面，所有的 `<input type="file" />`只支持单个文件选择。
 
-　　HTML5也添加了文件对象（File），可以方便的获得文件本身的一些信息（name、size、type），在上传前知道文件的大小，实现限制上传大小。
+　　HTML5也添加了文件对象（File），File对象继承自Blob对象，可以方便的获得文件本身的一些信息（name、size、type）。其中，属性name表示文件的名字，这个名字去掉了文件的路径信息，而只保留了文件名；属性size在上传前知道文件的大小，实现限制上传大小；属性type表示文件的MIME类型。
 
 ```
 <input type="file" id="files" multiple accept="image/gif,image/jpeg,image/jpg,image/png">  // accept 属性，可以用来规定能够通过文件上传进行提交的文件类型。
@@ -111,13 +111,22 @@ FileReader 对象主要用来把文件读入内存，并且读取文件中的数
 var reader = new FileReader();
 ```
 
-该对象有以下方法：
+<font align="center">文件读取函数</font>
+| 函数名称 | 功能 |
+| -- | -- |
+| readAsBinaryString() | 读取文件内容，读取结果为一个 binary string。文件每一个 byte 会被表示为一个 [0..255] 区间内的整数。函数接受一个 File 对象作为参数 |
+| readAsText() | 读取文件内容，读取结果为一串代表文件内容的文本。函数接受一个 File 对象以及文本编码名称作为参数 |
+| readAsDataURL | 读取文件内容，读取结果为一个 data: 的 URL。DataURL 由 RFC2397 定义，具体可以参考 http:\/\/www.ietf.org\/rfc\/rfc2397.txt| 
 
-- abort：中断读取操作。
-- readAsArrayBuffer：读取文件内容到ArrayBuffer对象中。
-- readAsBinaryString：将文件读取为二进制数据。
-- readAsDataURL：将文件读取为data: URL格式的字符串。
-- readAsText：将文件读取为文本。
+<font align="center">文件读取事件</font>
+| 事件名称 | 事件说明 |
+| -- | -- |
+| Onloadstart | 文件读取开始时触发 |
+| Progress | 当读取进行中时定时触发。事件参数中会含有已读取总数据量 |
+| Abort | 当读取被中止时触发 |
+| Error | 当读取出错时触发 | 
+| Load | 当读取成功完成时触发 |
+| Loadend | 当读取完成时，无论成功或者失败都会触发 |
 
 ## 上传图片预览
 
