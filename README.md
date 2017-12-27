@@ -1,12 +1,7 @@
 # Web-Upload-Download
 关于Web上传下载的积累总结
 
-· 0. 目录
-· 1. 前言
-· 2. FileList对象和File对象
-· 3. Blob对象
-    · 3.1 如何创建
-        · 3.1.1 Blob 对象可以使用 Blob() 构造函数来创建
+[TOC]
 
 # 前言
 
