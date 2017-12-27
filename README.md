@@ -1,6 +1,6 @@
 # 前言
 
-HTML5中提供的文件API在前端中有着丰富的应用，上传、下载、读取内容等在日常的交互中很常见。而且在各个浏览器的兼容也比较好，包括移动端，除了IE只支持IE10以上的版本。想要更好地掌握好操作文件的功能，先要熟悉每个API。
+　　HTML5中提供的文件API在前端中有着丰富的应用，上传、下载、读取内容等在日常的交互中很常见。而且在各个浏览器的兼容也比较好，包括移动端，除了IE只支持IE10以上的版本。想要更好地掌握好操作文件的功能，先要熟悉每个API。
 
 在Web浏览器上传文件一般有以下几种方式：
 
@@ -43,7 +43,7 @@ Blob 对象相当于一个容器，可以用于存放二进制数据。它有两
 var blob = new Blob(['hello'], {type:"text/plain"});
 ```
 
-Blob 构造函数中的第一个参数是一个数组，存放数据可以是任意多个ArrayBuffer、ArrayBufferView、Blob或者 DOMString对象。
+　　Blob 构造函数中的第一个参数是一个数组，存放数据可以是任意多个ArrayBuffer、ArrayBufferView、Blob或者 DOMString对象。
 
 #### 1、创建一个装填DOMString对象的Blob对象
 
@@ -155,7 +155,7 @@ Loadend | 当读取完成时，无论成功或者失败都会触发
 
 ## 数据备份与恢复
 
-FileReader 对象的 readAsText() 可以读取文件的文本，结合 Blob 对象下载文件的功能，那就可以实现将数据导出文件备份到本地，当数据要恢复时，通过 input 把备份文件上传，使用 readAsText() 读取文本，恢复数据。
+　　FileReader 对象的 readAsText() 可以读取文件的文本，结合 Blob 对象下载文件的功能，那就可以实现将数据导出文件备份到本地，当数据要恢复时，通过 input 把备份文件上传，使用 readAsText() 读取文本，恢复数据。
 
 # 4. WebSocket上传
 
@@ -229,6 +229,5 @@ function uploadFile(file){
 }
 ```
 
-xhr2在结合H5的其他特性，可以实现上述flash上传的所以功能外，还可以实现拖拽上传功能。 
-由于诸多HTML5特性（Blob ,xhr2,FileReader,ArrayBuffer等）在IE10+中才有效， 
-所以xhr2上传更适合在chrome，firefox等高版本的浏览器或和移动端使用。
+　　xhr2在结合H5的其他特性，可以实现上述flash上传的所以功能外，还可以实现拖拽上传功能。 
+　　由于诸多HTML5特性（Blob ,xhr2,FileReader,ArrayBuffer等）在IE10+中才有效，所以xhr2上传更适合在chrome，firefox等高版本的浏览器或和移动端使用。
