@@ -5,9 +5,10 @@ HTML5中提供的文件API在前端中有着丰富的应用，上传、下载、
 在Web浏览器上传文件一般有以下几种方式：
 
 - FileList对象和File对象
-- 原生JavaScript实现Ajax上传文件
-- jQuery实现Ajax上传文件
-- form+iframe上传文件
+- Blob对象
+- FileReader对象
+- WebSocket上传
+- XHR2上传
 
 # 1. FileList对象和File对象
 
