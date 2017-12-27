@@ -229,5 +229,5 @@ function uploadFile(file){
 }
 ```
 
-　　xhr2在结合H5的其他特性，可以实现上述flash上传的所以功能外，还可以实现拖拽上传功能。 
+　　xhr2在结合H5的其他特性，可以实现上述flash上传的所以功能外，还可以实现拖拽上传功能。<br /> 
 　　由于诸多HTML5特性（Blob ,xhr2,FileReader,ArrayBuffer等）在IE10+中才有效，所以xhr2上传更适合在chrome，firefox等高版本的浏览器或和移动端使用。
