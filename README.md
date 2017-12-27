@@ -111,12 +111,12 @@ FileReader 对象主要用来把文件读入内存，并且读取文件中的数
 var reader = new FileReader();
 ```
 
-<font align="center">文件读取函数</font><br />
-| 函数名称 | 功能 |<br />
-| -- | -- |<br />
-| readAsBinaryString() | 读取文件内容，读取结果为一个 binary string。文件每一个 byte 会被表示为一个 [0..255] 区间内的整数。函数接受一个 File 对象作为参数 |<br />
-| readAsText() | 读取文件内容，读取结果为一串代表文件内容的文本。函数接受一个 File 对象以及文本编码名称作为参数 |<br />
-| readAsDataURL | 读取文件内容，读取结果为一个 data: 的 URL。DataURL 由 RFC2397 定义，具体可以参考 http:\/\/www.ietf.org\/rfc\/rfc2397.txt | <br />
+<font align="center">文件读取函数</font>
+| 函数名称 | 功能 |
+| -- | -- |
+| readAsBinaryString() | 读取文件内容，读取结果为一个 binary string。文件每一个 byte 会被表示为一个 [0..255] 区间内的整数。函数接受一个 File 对象作为参数 |
+| readAsText() | 读取文件内容，读取结果为一串代表文件内容的文本。函数接受一个 File 对象以及文本编码名称作为参数 |
+| readAsDataURL | 读取文件内容，读取结果为一个 data: 的 URL。DataURL 由 RFC2397 定义，具体可以参考 http:\/\/www.ietf.org\/rfc\/rfc2397.txt | 
 
 <font align="center">文件读取事件</font><br />
 | 事件名称 | 事件说明 |
