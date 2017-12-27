@@ -236,15 +236,7 @@ function uploadFile(file){
 
 　　XMLHttpRequest Level 2 添加了一个新的接口——FormData。利用 FormData 对象，我们可以通过 JavaScript 用一些键值对来模拟一系列表单控件，我们还可以使用 XMLHttpRequest 的 send() 方法来异步的提交表单。与普通的 Ajax 相比，使用 FormData 的最大优点就是我们可以异步上传二进制文件。
 
-1）创建一个FormData空对象，然后使用append方法添加key/value
-
-```
-var fd = new FormData();
-fd.append('name','Bob');
-fd.append('gender','male');
-```
-
-2）取得form对象，作为参数传入到FormData对象
+1）用`<form>`表单构造`FormData`对象时，取得form对象，作为参数传入到FormData对象
 
 ```
 <form name="form1" id="form1">
@@ -256,4 +248,22 @@ fd.append('gender','male');
 ```
 var form = document.getElementById("form1");
 var fd = new FormData(form);
+```
+
+2）没有`<form>`标签也没有`enctype="multiple/form-data"属性`时，创建一个FormData空对象，然后使用append方法添加key/value
+
+```
+<div id="uploadForm">
+    <input type="text" name="name" value="Bob" />
+    <input type="text" name="gender" value="male" />
+    <input id="file" type="file"/>
+    <button id="upload" type="button">upload</button>
+</div>
+```
+
+```
+var fd = new FormData();
+fd.append('name','Bob');
+fd.append('gender','male');
+fd.append('file', $('#file')[0].files[0]);
 ```
