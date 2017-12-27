@@ -120,7 +120,7 @@ var reader = new FileReader();
 
 <font align="center">文件读取事件</font><br />
 | 事件名称 | 事件说明 |
-| -- | -- |
+| -------- | -------- |
 | Onloadstart | 文件读取开始时触发 |
 | Progress | 当读取进行中时定时触发。事件参数中会含有已读取总数据量 |
 | Abort | 当读取被中止时触发 |
