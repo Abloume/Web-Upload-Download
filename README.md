@@ -119,14 +119,15 @@ var reader = new FileReader();
 | readAsDataURL | 读取文件内容，读取结果为一个 data: 的 URL。DataURL 由 RFC2397 定义，具体可以参考 http:\/\/www.ietf.org\/rfc\/rfc2397.txt | 
 
 <font align="center">文件读取事件</font><br />
-| 事件名称 | 事件说明 |
-| -------- | -------- |
-| Onloadstart | 文件读取开始时触发 |
-| Progress | 当读取进行中时定时触发。事件参数中会含有已读取总数据量 |
-| Abort | 当读取被中止时触发 |
-| Error | 当读取出错时触发 | 
-| Load | 当读取成功完成时触发 |
-| Loadend | 当读取完成时，无论成功或者失败都会触发 |
+
+事件名称 | 事件说明
+-------- | --------
+Onloadstart | 文件读取开始时触发
+Progress | 当读取进行中时定时触发。事件参数中会含有已读取总数据量
+Abort | 当读取被中止时触发
+Error | 当读取出错时触发 
+Load | 当读取成功完成时触发
+Loadend | 当读取完成时，无论成功或者失败都会触发
 
 ## 上传图片预览
 
